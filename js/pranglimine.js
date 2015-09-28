@@ -1,7 +1,6 @@
-var timeLeft;
-var taimOuter;
-var answer;
+var timeLeft, taimOuter, answer, score;
 var signs = ['+', '-'];
+score = 0;
 
 function startGame() {
 	timeLeft = 60;
@@ -28,4 +27,27 @@ function generateOperation() {
 function setTaimer() {
 	timeLeft -= 1;
 	taimOuter = setTimeout(function(){taimer()}, 1000);
+}
+
+function clearAnwserPlace() {
+	
+}
+
+function checkAnswer(inputedAnswer) {
+	if (inputedAnswer == answer) {
+		score ++;
+		clearAnwserPlace();
+	}
+}
+
+function buttonPressed(inputButton) {
+	var inputedAnswer = "";
+	if (inputButton === "del") {
+		inputedAnswer.substring(0, inputedAnswer.length-1);
+	}else if (inputButton === "enter") {
+		checkAnswer(inputedAnswer)
+	} else {
+		inputedAnswer += inputButton;
+	}
+
 }
