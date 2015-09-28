@@ -6,6 +6,7 @@ var difficultyLevel = {ez:2, medium:2, hard:3};
 var problemsSum;
 var solvedProblemsSum;
 var score = 0;
+var difficulty;
 
 function startGame() {
 	timeLeft = 60;
@@ -47,6 +48,29 @@ function generateOperation(difficulty) {
 	document.getElementById('tehe').innerHTML = 'Tehe: ' + number1 + signs[sign] + number2 + "=";
 }
 
+
+function submitHighScore() {
+	highScoresdata = generateHighScoresJson();
+	printHighScores();
+}
+
+function generateHighScoresJson() {
+	var highScores = {};
+	highScores["difficulty"] = difficulty;
+	highScores["difficulty"] = difficulty;
+
+}
+
+function printHighScores() {
+	var highScoresTable = document.getElementById("highScoresTable");
+	highScoresTable.innerHTML = highScoresTable+
+		"<tr>" +
+		"<td>" +
+		"" +
+		"</td>" +
+		"</tr>"
+}
+
 function taimer() {
 	if(timeLeft > 0){
 		timeLeft -= 1;
@@ -54,6 +78,7 @@ function taimer() {
 	}else{
 		alert("Time's up kids");
 		clearTimeout(taimOuter);
+		submitHighScore();
 	}
 }
 
@@ -63,7 +88,7 @@ function clearAnwserPlace() {
 
 function checkAnswer(inputedAnswer) {
 	if (inputedAnswer == answer) {
-		score ++;
+		score++;
 		clearAnwserPlace();
 	}
 }
