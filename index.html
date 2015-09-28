@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript koolitus</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="row header">
+				<h1 class="text-center">Pranglimine</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-3 leaderboard">
+					<h4>Edetabel</h4>
+					<div id="leaderboard">
+						<table>
+							<tr>
+								<td>Raskustase</td>
+								<td>Tehete arv</td>
+								<td>Õigeid vastuseid</td>
+								<td>Aeg</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				<div class="col-md-9 playground">
+					<div class="row text-center">
+						<p class="lead">
+							Raskustase:
+						</p>
+						<select id="boardSize">
+							<option value="ez">Kerge</option>
+							<option value="medium">Keskmine</option>
+							<option value="hard">Raske</option>
+						</select>
+						<button type="button" class="btn btn-success">Start!</button>						
+					</div>
+					<div class="row">
+						<h4 id="aeg">Aega jäänud:</h4>
+						<h4 id="tehe">Tehe:</h4>
+					</div>
+					<div id="gameTables" class="row">
+						<table>
+							<tr>
+								<td class="numPad">7</td>
+								<td class="numPad">8</td>
+								<td class="numPad">9</td>
+							</tr>
+							<tr>
+								<td class="numPad">4</td>
+								<td class="numPad">5</td>
+								<td class="numPad">6</td>
+							</tr>
+							<tr>
+								<td class="numPad">1</td>
+								<td class="numPad">2</td>
+								<td class="numPad">3</td>
+							</tr>
+							<tr>
+								<td class="numPad zero-button" colspan="2">0</td>
+								<td class="numPad">del</td>
+							</tr>
+							<tr>
+								<td class="numPad enter-button" colspan="3">Enter</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+	
+	</body>
+</html>
