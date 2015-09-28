@@ -3,11 +3,14 @@ var taimOuter;
 var answer;
 var signs = ['+', '-', '*'];
 var difficultyLevel = {ez:2, medium:2, hard:3};
+var problemsSum;
+var solvedProblemsSum;
 
 function startGame() {
 	timeLeft = 60;
 	difficulty = document.getElementById("difficultyLevel").value;
 	generateOperation(difficulty);
+	taimer();
 }
 
 function generateOperation(difficulty) {
@@ -43,7 +46,7 @@ function generateOperation(difficulty) {
 	document.getElementById('tehe').innerHTML = 'Tehe: ' + number1 + signs[sign] + number2 + "=";
 }
 
-function setTaimer() {
+function taimer() {
 	if(timeLeft > 0){
 		timeLeft -= 1;
 		taimOuter = setTimeout(function(){taimer()}, 1000);
