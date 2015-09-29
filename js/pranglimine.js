@@ -12,9 +12,8 @@ function startGame() {
 	clearTimeout(taimOuter);
 	timeLeft = 60;
     difficulty = document.getElementById("difficultyLevel").value;
-    generateOperation(difficulty);
+	document.getElementById('tehe').innerHTML = generateOperation(difficulty);
     taimer();
-	
 }
 
 function generateOperation(difficulty) {
@@ -47,7 +46,7 @@ function generateOperation(difficulty) {
     } else if (sign == 2) {
         answer = number1 * number2;
     }
-    document.getElementById('tehe').innerHTML = 'Tehe: ' + number1 + signs[sign] + number2 + "=";
+    return 'Tehe: ' + number1 + signs[sign] + number2 + "=";
 }
 
 
@@ -95,6 +94,7 @@ function clearAnwserPlace() {
 function checkAnswer(inputedAnswer) {
     if (inputedAnswer == answer) {
         score++;
+		//kuna siin tuleks uus tehe genereerida, siis lihtsalt document.getElementById('tehe').innerHTML = generateOperation(difficulty); timmiks siin
         clearAnwserPlace();
     }
 }
