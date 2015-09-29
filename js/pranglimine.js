@@ -7,6 +7,8 @@ var problemsSum;
 var solvedProblemsSum;
 var score = 0;
 var difficulty;
+var answerTag = document.getElementById("vastus");
+var inputedAnswer = "";
 
 function startGame() {
 	clearTimeout(taimOuter);
@@ -88,25 +90,34 @@ function taimer() {
 }
 
 function clearAnwserPlace() {
-
+    answerTag.innerHTML = "_";
 }
 
-function checkAnswer(inputedAnswer) {
+function checkAnswer() {
     if (inputedAnswer == answer) {
         score++;
+<<<<<<< HEAD
 		//kuna siin tuleks uus tehe genereerida, siis lihtsalt document.getElementById('tehe').innerHTML = generateOperation(difficulty); timmiks siin
         clearAnwserPlace();
+=======
+        generateOperation();
+    } else {
+
+>>>>>>> af777d87dac4e2836d17c1e3ebe0e63e329c9a8d
     }
+    clearAnwserPlace();
 }
 
 function buttonPressed(inputButton) {
-    var inputedAnswer = "";
     if (inputButton === "del") {
-        inputedAnswer.substring(0, inputedAnswer.length - 1);
+        if (inputedAnswer.length > 0) {
+            inputedAnswer = inputedAnswer.substring(0, inputedAnswer.length - 1);
+        }
     } else if (inputButton === "enter") {
-        checkAnswer(inputedAnswer)
+        checkAnswer();
     } else {
         inputedAnswer += inputButton;
     }
+    answerTag.innerHTML = inputedAnswer;
 
 }
