@@ -7,6 +7,8 @@ var problemsSum;
 var solvedProblemsSum;
 var score = 0;
 var difficulty;
+var answerTag = document.getElementById("vastus");
+var inputedAnswer = "";
 
 function startGame() {
 	clearTimeout(taimOuter);
@@ -89,24 +91,29 @@ function taimer() {
 }
 
 function clearAnwserPlace() {
-
+    answerTag.innerHTML = "_";
 }
 
-function checkAnswer(inputedAnswer) {
+function checkAnswer() {
     if (inputedAnswer == answer) {
         score++;
-        clearAnwserPlace();
+        generateOperation();
+    } else {
+
     }
+    clearAnwserPlace();
 }
 
 function buttonPressed(inputButton) {
-    var inputedAnswer = "";
     if (inputButton === "del") {
-        inputedAnswer.substring(0, inputedAnswer.length - 1);
+        if (inputedAnswer.length > 0) {
+            inputedAnswer = inputedAnswer.substring(0, inputedAnswer.length - 1);
+        }
     } else if (inputButton === "enter") {
-        checkAnswer(inputedAnswer)
+        checkAnswer();
     } else {
         inputedAnswer += inputButton;
     }
+    answerTag.innerHTML = inputedAnswer;
 
 }
