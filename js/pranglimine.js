@@ -9,6 +9,7 @@ var score = 0;
 var difficulty;
 var answerTag = document.getElementById("vastus");
 var inputedAnswer = "";
+var numberOfOperations = 0;
 
 function startGame() {
 	clearTimeout(taimOuter);
@@ -16,6 +17,7 @@ function startGame() {
     difficulty = document.getElementById("difficultyLevel").value;
 	document.getElementById('tehe').innerHTML = generateOperation(difficulty);
     taimer();
+    printScore();
 }
 
 function generateOperation(difficulty) {
@@ -65,11 +67,22 @@ function generateHighScoresJson() {
 }
 
 function printHighScores() {
+    var now = new Date();
+    var formatedDate = now.toLocaleTimeString();
     var highScoresTable = document.getElementById("highScoresTable");
-    highScoresTable.innerHTML = highScoresTable +
+    highScoresTable.innerHTML +=
         "<tr>" +
         "<td>" +
-        "" +
+        difficulty +
+        "</td>" +
+        "<td>" +
+        numberOfOperations +
+        "</td>" +
+        "<td>" +
+        score +
+        "</td>" +
+        "<td>" +
+        formatedDate +
         "</td>" +
         "</tr>"
 }
@@ -85,26 +98,31 @@ function taimer() {
 		document.getElementById('aeg').innerHTML = "Aeg otsas :(";
         alert("Time's up kids");
         clearTimeout(taimOuter);
-        submitHighScore();
+        submitHighScore(score);
+        score = 0;
     }
 }
 
 function clearAnwserPlace() {
     answerTag.innerHTML = "_";
+    inputedAnswer = "";
+}
+
+function printScore() {
+    var scoreTag = document.getElementById("skoor");
+    scoreTag.innerHTML = score;
 }
 
 function checkAnswer() {
     if (inputedAnswer == answer) {
         score++;
-<<<<<<< HEAD
 		//kuna siin tuleks uus tehe genereerida, siis lihtsalt document.getElementById('tehe').innerHTML = generateOperation(difficulty); timmiks siin
+        document.getElementById('tehe').innerHTML = generateOperation(difficulty);
         clearAnwserPlace();
-=======
-        generateOperation();
     } else {
-
->>>>>>> af777d87dac4e2836d17c1e3ebe0e63e329c9a8d
     }
+    printScore();
+    numberOfOperations++;
     clearAnwserPlace();
 }
 
