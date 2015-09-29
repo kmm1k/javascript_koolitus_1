@@ -100,6 +100,7 @@ function taimer() {
         clearTimeout(taimOuter);
         submitHighScore(score);
         score = 0;
+        numberOfOperations = 0;
     }
 }
 

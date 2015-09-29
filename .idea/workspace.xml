@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1642a8e3-f4aa-4b76-9db6-de6a66099f55" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pranglimine.js" afterPath="$PROJECT_DIR$/js/pranglimine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javakoolitus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +29,8 @@
           <file leaf-file-name="pranglimine.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/pranglimine.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6555066">
-                  <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+                <state vertical-scroll-proportion="0.8246696">
+                  <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -450,15 +447,15 @@
       <updated>1443447845044</updated>
       <workItem from="1443447846264" duration="1008000" />
       <workItem from="1443473031782" duration="3018000" />
-      <workItem from="1443521080597" duration="3018000" />
+      <workItem from="1443521080597" duration="3265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7044000" />
+    <option name="totallyTimeSpent" value="7291000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
+    <frame x="-9" y="-9" width="2418" height="1318" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -560,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/pranglimine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6555066">
-          <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.8246696">
+          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
           <folding />
         </state>
       </provider>
