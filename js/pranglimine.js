@@ -9,10 +9,12 @@ var score = 0;
 var difficulty;
 
 function startGame() {
-    timeLeft = 60;
+	clearTimeout(taimOuter);
+	timeLeft = 60;
     difficulty = document.getElementById("difficultyLevel").value;
     generateOperation(difficulty);
     taimer();
+	
 }
 
 function generateOperation(difficulty) {
@@ -77,7 +79,9 @@ function taimer() {
         taimOuter = setTimeout(function () {
             taimer()
         }, 1000);
+		document.getElementById('aeg').innerHTML = "Aega jäänud: " + timeLeft + "s";
     } else {
+		document.getElementById('aeg').innerHTML = "Aeg otsas :(";
         alert("Time's up kids");
         clearTimeout(taimOuter);
         submitHighScore();
