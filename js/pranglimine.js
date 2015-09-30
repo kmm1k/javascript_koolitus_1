@@ -61,9 +61,7 @@ function submitHighScore() {
 
 function generateHighScoresJson() {
     var highScores = {};
-    highScores["difficulty"] = difficulty;
-    highScores["difficulty"] = difficulty;
-
+    return highScores["difficulty"] = difficulty;
 }
 
 function printHighScores() {
@@ -120,7 +118,6 @@ function checkAnswer() {
 		//kuna siin tuleks uus tehe genereerida, siis lihtsalt document.getElementById('tehe').innerHTML = generateOperation(difficulty); timmiks siin
         document.getElementById('tehe').innerHTML = generateOperation(difficulty);
         clearAnwserPlace();
-    } else {
     }
     printScore();
     numberOfOperations++;
